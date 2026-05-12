@@ -11,13 +11,13 @@ github:
   owner_name: Cameron Pfiffer
 
 speaker-info:
-  speaker-name: "Win Monroe (Copenhagen Business School)"
-  speaker-paper: "Dealers, Information, and Liquidity Crises in Safe Assets"
-  coauthors: "Robert Czech (Bank of England)"
-  speaker-date: "May 12, 11 a.m. (New York time)"
+  speaker-name: "Paige Rowberry (Utah)"
+  #speaker-paper: "Dealers, Information, and Liquidity Crises in Safe Assets"
+  #coauthors: "Robert Czech (Bank of England)"
+  speaker-date: "May 26, 11 a.m. (New York time)"
   #paper-link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5186551"
-  paper-link: "papers/Dealers Information and Liquidity Crises in Safe Assets.pdf" # If you have a file instead
+  #paper-link: "papers/Dealers Information and Liquidity Crises in Safe Assets.pdf" # If you have a file instead
   webinar-link: "https://us06web.zoom.us/j/84504721258?pwd=I2cR9GtVjSa0myOQKYdxRTvQ1PHENW.1"
   # discussant: "Michael Noe (Eurex), Amit Goyal (SFI/Lausanne), and Eric Uhlmann (INSEAD)"
   # slides-link: /slides/RobinhoodSlides_TME.pdf
-  abstract: "In this paper, we empirically study the role of information in safe asset liquidity crises, using the 2022 UK LDI crisis as a laboratory. Contrary to traditional adverse selection models, which predict higher liquidity costs due to the presence of informed traders, we find that dealers initially reduce trade costs for informed investors, and subsequently raise costs and reduce volumes for the broader market. Importantly, the results are not driven by competition for trading relationships or compensation for client-supplied liquidity. We interpret this as evidence of dealers seeking to learn from informed investors and then restricting liquidity provision as they process this information. We also document that dealers subsequently exploit their informational advantage in anonymous interdealer markets and that similar dynamics are present in other crises. Our findings suggest that dealers’ reallocation of liquidity towards informed clients during crises deepens market-wide liquidity shortages and amplifies the severity of liquidity crises."
+  #abstract: "In this paper, we empirically study the role of information in safe asset liquidity crises, using the 2022 UK LDI crisis as a laboratory. Contrary to traditional adverse selection models, which predict higher liquidity costs due to the presence of informed traders, we find that dealers initially reduce trade costs for informed investors, and subsequently raise costs and reduce volumes for the broader market. Importantly, the results are not driven by competition for trading relationships or compensation for client-supplied liquidity. We interpret this as evidence of dealers seeking to learn from informed investors and then restricting liquidity provision as they process this information. We also document that dealers subsequently exploit their informational advantage in anonymous interdealer markets and that similar dynamics are present in other crises. Our findings suggest that dealers’ reallocation of liquidity towards informed clients during crises deepens market-wide liquidity shortages and amplifies the severity of liquidity crises."
