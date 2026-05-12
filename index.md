@@ -73,6 +73,7 @@ The Microstructure Exchange will host resources, tools, and data for microstruct
 - [Quote-to-trade ratios](https://drive.google.com/file/d/1H8wMvA_59-N5Y_xiDPGTbpBsX5BFwOIV/view) from the paper [_Quoting activity and the cost of capital_ ](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3005928) by Ioanid Rosu, Elvira Sojli, and Wing Wah Tham. Wharton Research Data Services (WRDS) data was used in preparing this output.
 
 ## Past talks
+- Win Monroe: Dealers, Information, and Liquidity Crises in Safe Assets ([recording](https://youtu.be/WJf6qy_2SYU), [paper](https://microstructure.exchange/papers/Dealers%20Information%20and%20Liquidity%20Crises%20in%20Safe%20Assets.pdf))
 - Vincent van Kervel: Scale Economies in Liquidity Provision: Evidence from Designated Market Makers ([recording](https://youtu.be/kZd8hCnluHo), [paper](https://microstructure.exchange/papers/Paper_DMM.pdf)) 
 - Vincent Maurin: Dealers as Record Keepers ([recording](https://youtu.be/7Ta4lqrh_Qs), [paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6165406)) 
 - Chaojun Wang: China Walls ([recording](https://youtu.be/_pdbnr4rOug), [paper](https://microstructure.exchange/papers/ChinaWalls.pdf)) 
