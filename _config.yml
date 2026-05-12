@@ -11,9 +11,9 @@ github:
   owner_name: Cameron Pfiffer
 
 speaker-info:
-  speaker-name: "Paige Rowberry (Utah)"
-  #speaker-paper: "Dealers, Information, and Liquidity Crises in Safe Assets"
-  #coauthors: "Robert Czech (Bank of England)"
+  speaker-name: "Paige Rowberry (University of Utah)"
+  speaker-paper: "Does Market Fragmentation Improve Price Efficiency?"
+  coauthors: "Jonathan Brogaard (University of Utah) and Anne Haubo Dyhrberg (University of Delaware)"
   speaker-date: "May 26, 11 a.m. (New York time)"
   #paper-link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5186551"
   #paper-link: "papers/Dealers Information and Liquidity Crises in Safe Assets.pdf" # If you have a file instead
