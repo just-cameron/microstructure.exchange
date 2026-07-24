@@ -40,7 +40,7 @@ To receive updates about upcoming seminars, please subscribe to our [mailing lis
 
 - Björn Hagströmer -- Stockholm University ([website](https://hagstromer.org/), [twitter](https://twitter.com/bjornhagstromer), or [email](mailto:bjh@sbs.su.se))
 - Katya Malinova -- McMaster University ([website](https://sites.google.com/site/katyamalinova/) or [email](mailto:malinovk@mcmaster.ca))
-- Josh Mollner -- Northwestern University ([website](https://sites.google.com/site/joshuamollner/) or [email](mailto:joshua.mollner@kellogg.northwestern.edu))
+- Josh Mollner -- University of Illinois ([website](https://sites.google.com/site/joshuamollner/) or [email](mailto:jmollner@illinois.edu))
 - Andreas Park -- University of Toronto ([website](https://sites.google.com/site/parkandreas/), [twitter](https://twitter.com/financeutm), or [email](mailto:andreas.park@rotman.utoronto.ca))
 - Cameron Pfiffer -- Stanford University ([website](https://cameron.pfiffer.org))
 - Andriy Shkilko -- University of Georgia ([website](https://www.terry.uga.edu/directory/andriy-shkilko/), [twitter](https://twitter.com/AndriyShkilko), or [email](mailto:ashkilko@uga.edu))
@@ -55,6 +55,8 @@ WRDS is sponsoring the TME best paper award. Every academic year, all papers pre
 - 2025, _Optimal Exchange Design_, by Daniel Chen ([recording](https://youtu.be/ovJwCV2iux0), [paper](https://danieltchen.com/OEDOct.pdf))
 - 2024, _Measuring Public and Private Information using Quote and Trade Races_, by James Brugler and Terry Hendershott
 - 2023, _Would Order-By-Order Auctions Be Competitive?_, by Thomas Ernst, Chester S. Spatt, and Jian Sun.
+
+Thank you to everyone who vote for papers and to WRDS for sponsoring the award.
 
 ## Resources
 
