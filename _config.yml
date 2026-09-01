@@ -11,13 +11,13 @@ github:
   owner_name: Cameron Pfiffer
 
 speaker-info:
-  speaker-name: "Paige Rowberry (University of Utah)"
-  speaker-paper: "Does Market Fragmentation Improve Price Efficiency?"
-  coauthors: "Jonathan Brogaard (University of Utah) and Anne Haubo Dyhrberg (University of Delaware)"
-  speaker-date: "May 26, 11 a.m. (New York time)"
-  #paper-link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5186551"
-  paper-link: "papers/Brogaard, Dyhrberg, Rowberry.pdf" # If you have a file instead
-  webinar-link: "https://us06web.zoom.us/j/84504721258?pwd=I2cR9GtVjSa0myOQKYdxRTvQ1PHENW.1"
+  speaker-name: "Farshid Abdi (Texas A&M)"
+  speaker-paper: "Overnight Corporate Bond Trading"
+  coauthors: "Marco Rossi (Texas A&M) and Botao Wu (CUHK)"
+  speaker-date: "Sept 15, 11 a.m. (New York time)"
+  paper-link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7198520"
+  #paper-link: "papers/Brogaard, Dyhrberg, Rowberry.pdf" # If you have a file instead
+  webinar-link: "https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1"
   # discussant: "Michael Noe (Eurex), Amit Goyal (SFI/Lausanne), and Eric Uhlmann (INSEAD)"
   # slides-link: /slides/RobinhoodSlides_TME.pdf
-  abstract: "Chen and Duffie (2021) argue that market fragmentation can improve price efficiency by enabling traders to split their orders across venues, reducing their overall price impact, making their trading more aggressive. Testing this theory in equity markets is difficult due to regulatory requirements that distort market independence. The cryptocurrency marketplace provides an ideal setting given its lack of regulatory interference. Taking advantage of sudden and unexpected changes in coin listings, we use a difference-in-difference identification strategy to show that fragmentation improves price efficiency, consistent with Chen and Duffie (2021). The implications for the role of fragmentation are essential for improving market quality and investor welfare."
+  abstract: "Corporate bond trades executed between 6:30 p.m. and 8:00 a.m. (ET) are not publicly disseminated until after TRACE reopens, generally between 8:00 and 8:15 a.m., creating a recurring interval of delayed post-trade transparency. Using enhanced TRACE data, we study how this temporary opacity affects trading and price discovery in the corporate bond market. Overnight trades are substantially larger than intraday trades and contribute disproportionately to price discovery. Overnight order imbalances predict future returns for both the same bond and other bonds issued by the same firm, indicating that overnight trades contain issuer-level private information. The price impact of overnight trades is significantly stronger and more persistent than that of intraday trades. Overnight activity is also more concentrated among large dealers and associated with higher dealer spreads and worse receiver outcomes. Finally, TRACE dissemination expansions increase overnight trading activity, suggesting that informed traders strategically shift trading toward periods with delayed disclosure."
