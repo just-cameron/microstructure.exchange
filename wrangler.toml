@@ -1,0 +1,45 @@
+name = "tme-best-paper-vote"
+main = "src/worker.js"
+compatibility_date = "2026-06-01"
+workers_dev = true
+preview_urls = true
+routes = [
+  { pattern = "andreaspark.com/tme-best-paper-vote-2026*", zone_name = "andreaspark.com" },
+  { pattern = "microstructure.exchange/", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/index.html", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/season.html", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/season", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/about.html", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/about", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/award.html", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/award", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/resources.html", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/resources", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/past-talks.html", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/past-talks", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/submission.html", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/submission", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/site.css", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/submission.css", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/submission.js", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/favicon.svg", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/TME_schedule_2026-27.ics", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/api/submission", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/api/admin/submissions-export.csv", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/tme-paper-assessment-2026*", zone_name = "microstructure.exchange" },
+  { pattern = "microstructure.exchange/tme-paper-submission*", zone_name = "microstructure.exchange" }
+]
+
+[assets]
+directory = "./.deploy/public"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "tme-best-paper"
+database_id = "1aed3973-51a8-4277-9526-b525c19f75a6"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "PAPERS"
+bucket_name = "tme-review-papers"

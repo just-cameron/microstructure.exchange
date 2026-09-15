@@ -1,0 +1,22 @@
+{
+  "name": "tme-best-paper-vote",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "stage:assets": "node scripts/stage-public-assets.js",
+    "deploy": "npm run stage:assets && wrangler deploy",
+    "db:migrate:local": "wrangler d1 migrations apply tme-best-paper --local",
+    "db:migrate": "wrangler d1 migrations apply tme-best-paper --remote",
+    "seed:assessment": "node scripts/generate-assessment-data.js",
+    "preview:static": "npx http-server . -p 8788",
+    "export:assessment:local": "node scripts/export-assessment-results.js --local",
+    "export:assessment": "node scripts/export-assessment-results.js",
+    "export:submissions:local": "node scripts/export-submissions.js --local",
+    "export:submissions": "node scripts/export-submissions.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
