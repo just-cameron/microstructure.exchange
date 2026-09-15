@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TME Paper Submission</title>
+    <meta name="description" content="The Microstructure Exchange paper submission form.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="submission.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="shell nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="The Microstructure Exchange home">
+          <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+            <rect width="64" height="64" rx="10" fill="#2467a6"></rect>
+            <text x="32" y="39" fill="#f7f9fb" font-family="Nunito Sans, Arial, sans-serif" font-size="20" font-weight="800" text-anchor="middle" letter-spacing="1">TME</text>
+          </svg>
+        </a>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="season.html">Schedule</a>
+          <a class="active-nav" href="submission.html">Call for Papers</a>
+          <a href="about.html">About</a>
+          <a href="award.html">WRDS-TME Prize</a>
+          <a href="resources.html">Resources</a>
+          <a href="past-talks.html">Past Talks</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="site-header shell">
+      <div>
+        <p class="eyebrow">Call for papers</p>
+        <h1>Paper Submission</h1>
+        <p class="lede">Submit an anonymous PDF for consideration in the upcoming TME webinar season.</p>
+      </div>
+      <div class="status-panel" id="statusPanel">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span id="statusText">Ready for submission</span>
+      </div>
+    </section>
+
+    <main>
+      <form class="submission-form" id="submissionForm">
+        <section class="form-section">
+          <h2>Paper</h2>
+          <label for="title">Paper title</label>
+          <input id="title" name="title" type="text" required maxlength="300" autocomplete="off">
+
+          <label for="abstract">Abstract</label>
+          <textarea id="abstract" name="abstract" required maxlength="3500" rows="8" autocomplete="off"></textarea>
+          <p class="hint">Please paste the paper abstract. This helps us prepare the public schedule if the paper is accepted.</p>
+
+          <label class="upload-label" for="paper">Upload anonymous paper PDF</label>
+          <div class="dropzone" id="paperDropzone" role="button" tabindex="0" aria-label="Choose or drop anonymous paper PDF">
+            <input id="paper" name="paper" type="file" required accept=".pdf,application/pdf">
+            <strong>Drop your PDF here</strong>
+            <span>or click to choose a file</span>
+            <small id="paperFileName">No file selected</small>
+          </div>
+          <p class="hint">Maximum file size: 10MB. Please upload a PDF only, and make sure the paper is anonymous.</p>
+        </section>
+
+        <section class="form-section">
+          <h2>Submitting Author</h2>
+          <div class="field-grid">
+            <div>
+              <label for="submitterName">Name</label>
+              <input id="submitterName" name="submitterName" type="text" required maxlength="160" autocomplete="name">
+            </div>
+            <div>
+              <label for="submitterEmail">Email</label>
+              <input id="submitterEmail" name="submitterEmail" type="email" required maxlength="200" autocomplete="email">
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-row">
+            <h2>Co-authors</h2>
+            <button class="secondary-button" id="addCoauthorButton" type="button">Add co-author</button>
+          </div>
+          <div class="coauthors" id="coauthors"></div>
+          <p class="hint">We use co-author names and emails only to check reviewer conflicts of interest. Leave this section blank for a single-authored paper.</p>
+        </section>
+
+        <div class="submit-panel form-section">
+          <div>
+            <p class="consent-note">Papers may be exposed to AI tools during the review process. By submitting your paper, you consent to this use.</p>
+            <p class="form-message" id="formMessage" role="status"></p>
+          </div>
+          <button class="primary-button" id="submitButton" type="submit">Submit paper</button>
+        </div>
+      </form>
+
+      <section class="confirmation" id="confirmation" hidden>
+        <h2>Submission received</h2>
+        <p id="confirmationText"></p>
+        <p>Your paper has been submitted successfully. Thank you for sending it to TME.</p>
+        <p class="hint">Please keep this confirmation number for your records.</p>
+      </section>
+    </main>
+
+    <script src="submission.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Microstructure Exchange//TME Schedule 2026-27//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:The Microstructure Exchange 2026-27
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+UID:tme-20260915-farshid-abdi@microstructure.exchange
+DTSTAMP:20260908T223126Z
+DTSTART;TZID=America/New_York:20260915T110000
+DTEND;TZID=America/New_York:20260915T120000
+SUMMARY:TME: Farshid Abdi
+DESCRIPTION:Overnight Corporate Bond Trading\\nAuthors: Farshid Abdi\; Marco Rossi\; Botao Wu\\nZoom: https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+LOCATION:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+URL:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+END:VEVENT
+BEGIN:VEVENT
+UID:tme-20260929-faycal-drissi@microstructure.exchange
+DTSTAMP:20260908T223126Z
+DTSTART;TZID=America/New_York:20260929T110000
+DTEND;TZID=America/New_York:20260929T120000
+SUMMARY:TME: Fayçal Drissi
+DESCRIPTION:The Viability of Blockchain Markets under Discrete Clearing and Paid Priority\\nAuthors: Fayçal Drissi\; Agostino Capponi\; Alvaro Cartea\\nZoom: https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+LOCATION:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+URL:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+END:VEVENT
+BEGIN:VEVENT
+UID:tme-20261013-luca-galati@microstructure.exchange
+DTSTAMP:20260908T223126Z
+DTSTART;TZID=America/New_York:20261013T110000
+DTEND;TZID=America/New_York:20261013T120000
+SUMMARY:TME: Luca Galati
+DESCRIPTION:Not Dead Yet: Options Trading Floors\\nAuthors: Luca Galati\; Terrence Hendershott\; Saad Ali Khan\; Ryan Riordan\\nZoom: https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+LOCATION:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+URL:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+END:VEVENT
+BEGIN:VEVENT
+UID:tme-20261027-vincent-gregoire@microstructure.exchange
+DTSTAMP:20260908T223126Z
+DTSTART;TZID=America/New_York:20261027T110000
+DTEND;TZID=America/New_York:20261027T120000
+SUMMARY:TME: Vincent Grégoire
+DESCRIPTION:Who Wins and Who Loses in Prediction Markets: Evidence from Polymarket\\nAuthors: Vincent Grégoire\; Charles Martineau\; Pat Akey\; Nicolas Harvie\\nZoom: https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+LOCATION:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+URL:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+END:VEVENT
+BEGIN:VEVENT
+UID:tme-20261110-thierry-foucault@microstructure.exchange
+DTSTAMP:20260908T223126Z
+DTSTART;TZID=America/New_York:20261110T110000
+DTEND;TZID=America/New_York:20261110T120000
+SUMMARY:TME: Thierry Foucault
+DESCRIPTION:The Price of Exchange Data\\nAuthors: Thierry Foucault\; Vincent Maurin\\nZoom: https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+LOCATION:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+URL:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+END:VEVENT
+BEGIN:VEVENT
+UID:tme-20261124-albert-menkveld@microstructure.exchange
+DTSTAMP:20260908T223126Z
+DTSTART;TZID=America/New_York:20261124T110000
+DTEND;TZID=America/New_York:20261124T120000
+SUMMARY:TME: Albert Menkveld
+DESCRIPTION:Does News Trading Crowd Out Value Trading? Evidence from a Structural Estimation\\nAuthors: Albert J. Menkveld\; Lucas Saru\\nZoom: https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+LOCATION:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+URL:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+END:VEVENT
+BEGIN:VEVENT
+UID:tme-20261208-chaojun-wang@microstructure.exchange
+DTSTAMP:20260908T223126Z
+DTSTART;TZID=America/New_York:20261208T110000
+DTEND;TZID=America/New_York:20261208T120000
+SUMMARY:TME: Chaojun Wang
+DESCRIPTION:Shadow Discounts\\nAuthors: Chaojun Wang\; Tomy Lee\; Isacco Lotti\; Florian Nagler\; Giorgio Ottonello\\nZoom: https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+LOCATION:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+URL:https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1
+END:VEVENT
+END:VCALENDAR

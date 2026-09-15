@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fall 2026 Session Paper Assessment</title>
+    <meta name="description" content="Private TME Fall 2026 paper assessment form.">
+    <link rel="stylesheet" href="assessment.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">The Microstructure Exchange</p>
+        <h1>Fall 2026 Session Paper Assessment</h1>
+        <p class="lede">Please submit your ratings by August 24, 2026, 18:00 EST. Thank you for your support of TME!</p>
+        <p class="reviewer-line" id="reviewerText">Open your private review link to see your assigned papers.</p>
+      </div>
+      <div class="status-panel" id="statusPanel">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span id="statusText">Checking review link...</span>
+      </div>
+    </header>
+
+    <main>
+      <form class="assessment" id="assessmentForm">
+        <div class="form-bar">
+          <div>
+            <h2>Your Assigned Papers</h2>
+            <p id="paperCount"></p>
+          </div>
+          <button class="secondary-button" type="button" id="clearButton">Clear ratings</button>
+        </div>
+
+        <div class="papers" id="papers"></div>
+
+        <div class="overall-comments">
+          <label for="overallComments">Any comments for us (none are expected)</label>
+          <textarea id="overallComments" name="overallComments" rows="3" maxlength="1000"></textarea>
+        </div>
+
+        <div class="submit-panel">
+          <p class="form-message" id="formMessage" role="status"></p>
+          <button class="primary-button" type="submit" id="submitButton">Submit ratings</button>
+        </div>
+      </form>
+    </main>
+
+    <script src="assessment.js" type="module"></script>
+  </body>
+</html>
