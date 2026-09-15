@@ -841,8 +841,8 @@
 
   function renderTalkActions(talk, includeZoom = false) {
     const links = [];
-    if (talk.paperUrl) links.push('<a class="pill" href="' + escapeAttribute(talk.paperUrl) + '">paper</a>');
     if (talk.recordingUrl) links.push('<a class="pill" href="' + escapeAttribute(talk.recordingUrl) + '">recording</a>');
+    if (talk.paperUrl) links.push('<a class="pill" href="' + escapeAttribute(talk.paperUrl) + '">paper</a>');
     if (includeZoom) links.push('<a class="pill" href="https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1">Zoom</a>');
     return links.join("");
   }
