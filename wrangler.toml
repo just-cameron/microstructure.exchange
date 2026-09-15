@@ -4,7 +4,6 @@ compatibility_date = "2026-06-01"
 workers_dev = true
 preview_urls = true
 routes = [
-  { pattern = "andreaspark.com/tme-best-paper-vote-2026*", zone_name = "andreaspark.com" },
   { pattern = "microstructure.exchange/", zone_name = "microstructure.exchange" },
   { pattern = "microstructure.exchange/index.html", zone_name = "microstructure.exchange" },
   { pattern = "microstructure.exchange/season.html", zone_name = "microstructure.exchange" },
