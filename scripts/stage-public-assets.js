@@ -18,3 +18,6 @@ for (const entry of readdirSync(root)) {
     cpSync(source, join(outputDir, entry));
   }
 }
+
+// Preserve the original public URLs for papers from the archived website.
+cpSync(join(root, "old-website", "papers"), join(outputDir, "papers"), { recursive: true });
