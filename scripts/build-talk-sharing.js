@@ -42,7 +42,7 @@ export async function buildTalkSharing(directory) {
       <rect x="64" y="48" width="116" height="90" rx="16" fill="#2467a6"/>
       <g font-family="Arial, sans-serif">
       <text x="122" y="107" text-anchor="middle" font-size="36" font-weight="700" fill="#f7f9fb">TME</text>
-      <text x="208" y="86" font-size="28" font-weight="600" fill="#19232d">The Microstructure Exchange</text>
+      <text x="208" y="86" font-size="28" font-weight="600" fill="#19232d">Microstructure Exchange Webinar Series</text>
       <text x="208" y="122" font-size="23" fill="#526171">Market structure webinars</text>
       <text x="64" y="208" font-size="43" font-weight="700" fill="#2467a6">${escape(talk.presenter)}</text>
       ${titleLines.map((line, i) => `<text x="64" y="${278 + i * 54}" font-size="43" font-weight="600" fill="#19232d">${escape(line)}</text>`).join("")}

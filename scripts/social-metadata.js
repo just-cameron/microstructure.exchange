@@ -16,7 +16,7 @@ export function addSocialMetadata(directory) {
     const safeTitle = title.replaceAll('"', "&quot;");
     const url = `${origin}/${page === "index.html" ? "" : page}`;
     const image = `${origin}/social-preview.png`;
-    const alt = "TME — The Microstructure Exchange. Market structure webinars.";
+    const alt = "TME — Microstructure Exchange Webinar Series. Market structure webinars.";
     const tags = `
   <!-- Social preview -->
   <link rel="canonical" href="${url}">

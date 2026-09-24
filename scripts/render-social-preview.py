@@ -14,8 +14,8 @@ def text(position, value, size, color, bold=False):
 
 draw.rounded_rectangle((76*SCALE, 72*SCALE, 256*SCALE, 252*SCALE), radius=24*SCALE, fill="#2467a6")
 text((98, 125), "TME", 62, "#f7f9fb", True)
-text((300, 91), "The Microstructure", 58, "#19232d", True)
-text((300, 163), "Exchange", 58, "#19232d", True)
+text((300, 91), "Microstructure", 58, "#19232d", True)
+text((300, 163), "Exchange Webinar Series", 48, "#19232d", True)
 text((78, 341), "Market structure webinars", 48, "#2467a6", True)
 text((80, 416), "Research. Discussion. A connected community.", 30, "#526171")
 text((80, 538), "microstructure.exchange", 26, "#526171")
