@@ -1,6 +1,7 @@
-import { cpSync, mkdirSync, readdirSync, rmSync, statSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, statSync } from "node:fs";
 import { extname, join } from "node:path";
 import { addSocialMetadata } from "./social-metadata.js";
+import { buildTalkSharing } from "./build-talk-sharing.js";
 
 const root = process.cwd();
 const outputDir = join(root, ".deploy", "public");
@@ -23,3 +24,6 @@ for (const entry of readdirSync(root)) {
 // Preserve the original public URLs for papers from the archived website.
 cpSync(join(root, "old-website", "papers"), join(outputDir, "papers"), { recursive: true });
 addSocialMetadata(outputDir);
+// Retain published talk pages when the current season is replaced.
+if (existsSync(join(root, "talks"))) cpSync(join(root, "talks"), join(outputDir, "talks"), { recursive: true });
+await buildTalkSharing(outputDir);

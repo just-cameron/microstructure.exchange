@@ -1,3 +1,5 @@
+import { upcomingPreview } from "./talk-sharing.js";
+
 const VOTE_ROUTE_PREFIX = "/tme-best-paper-vote-2026";
 const ASSESSMENT_ROUTE_PREFIX = "/tme-paper-assessment-2026";
 const SUBMISSION_ROUTE_PREFIX = "/tme-paper-submission";
@@ -16,6 +18,9 @@ export default {
     const path = normalizePath(url.pathname);
 
     try {
+      if ((url.pathname === "/" || url.pathname === "/index.html") && ["GET", "HEAD"].includes(request.method)) {
+        return await upcomingPreview(request, env);
+      }
       if (url.pathname === VOTE_ROUTE_PREFIX || url.pathname === ASSESSMENT_ROUTE_PREFIX || url.pathname === SUBMISSION_ROUTE_PREFIX) {
         url.pathname = `${url.pathname}/`;
         return Response.redirect(url.toString(), 302);

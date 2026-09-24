@@ -4,6 +4,7 @@ compatibility_date = "2026-06-01"
 workers_dev = true
 preview_urls = true
 routes = [
+  { pattern = "microstructure.exchange/talks/*", zone_name = "microstructure.exchange" },
   { pattern = "microstructure.exchange/social-preview.png", zone_name = "microstructure.exchange" },
   { pattern = "microstructure.exchange/papers/*", zone_name = "microstructure.exchange" },
   { pattern = "microstructure.exchange/", zone_name = "microstructure.exchange" },
@@ -34,6 +35,7 @@ routes = [
 [assets]
 directory = "./.deploy/public"
 binding = "ASSETS"
+run_worker_first = ["/", "/index.html"]
 
 [[d1_databases]]
 binding = "DB"
