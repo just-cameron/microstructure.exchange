@@ -1,9 +1,10 @@
 import { cpSync, mkdirSync, readdirSync, rmSync, statSync } from "node:fs";
 import { extname, join } from "node:path";
+import { addSocialMetadata } from "./social-metadata.js";
 
 const root = process.cwd();
 const outputDir = join(root, ".deploy", "public");
-const deployableExtensions = new Set([".html", ".css", ".js", ".svg", ".ics"]);
+const deployableExtensions = new Set([".html", ".css", ".js", ".svg", ".ics", ".png"]);
 
 rmSync(outputDir, { recursive: true, force: true });
 mkdirSync(outputDir, { recursive: true });
@@ -21,3 +22,4 @@ for (const entry of readdirSync(root)) {
 
 // Preserve the original public URLs for papers from the archived website.
 cpSync(join(root, "old-website", "papers"), join(outputDir, "papers"), { recursive: true });
+addSocialMetadata(outputDir);

@@ -4,6 +4,7 @@ compatibility_date = "2026-06-01"
 workers_dev = true
 preview_urls = true
 routes = [
+  { pattern = "microstructure.exchange/social-preview.png", zone_name = "microstructure.exchange" },
   { pattern = "microstructure.exchange/papers/*", zone_name = "microstructure.exchange" },
   { pattern = "microstructure.exchange/", zone_name = "microstructure.exchange" },
   { pattern = "microstructure.exchange/index.html", zone_name = "microstructure.exchange" },
