@@ -1096,6 +1096,7 @@ h1 {
 
 .text-link-subtle {
   text-decoration: none;
+  font-weight: inherit;
 }
 
 .person:nth-child(2n) {
