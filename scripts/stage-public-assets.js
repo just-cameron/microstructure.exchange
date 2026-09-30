@@ -24,6 +24,7 @@ for (const entry of readdirSync(root)) {
 // Preserve the original public URLs for papers from the archived website.
 cpSync(join(root, "old-website", "papers"), join(outputDir, "papers"), { recursive: true });
 addSocialMetadata(outputDir);
+if (existsSync(join(root, "slides"))) cpSync(join(root, "slides"), join(outputDir, "slides"), { recursive: true });
 // Retain published talk pages when the current season is replaced.
 if (existsSync(join(root, "talks"))) cpSync(join(root, "talks"), join(outputDir, "talks"), { recursive: true });
 await buildTalkSharing(outputDir);

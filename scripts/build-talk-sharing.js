@@ -63,7 +63,7 @@ export async function buildTalkSharing(directory) {
       <style>.talk-page{padding-top:40px;padding-bottom:64px}.talk-page h1{font-size:32px;line-height:1.25;max-width:1000px}.talk-page .abstract-text{max-width:850px;line-height:1.75;margin:32px 0}.talk-page .archive-links{flex-wrap:wrap;margin-top:24px}.talk-page .share-status{margin-left:12px}.talk-page .talk-authors{line-height:1.6}</style></head><body>
       ${header}<main class="shell talk-page"><p class="eyebrow">${escape(date)}</p><h1>${escape(talk.title)}</h1>
       <p class="lead">Presented by ${escape(talk.presenter)}</p><p class="talk-authors">${escape(talk.authors)}</p>
-      <div class="archive-links">${action("recording", talk.recordingUrl)}${action("paper", talk.paperUrl)}${action("Zoom", zoom)}${action("Schedule", "/season.html")}
+      <div class="archive-links">${action("recording", talk.recordingUrl)}${action("paper", talk.paperUrl)}${action("slides", talk.slidesUrl)}${action("Zoom", zoom)}${action("Schedule", "/season.html")}
       <button class="pill" type="button" id="copyTalkLink" style="cursor:pointer">Copy talk link</button><span id="shareStatus" class="share-status" role="status"></span></div>
       <div class="abstract-text"><h2>Abstract</h2><p>${escape(talk.abstract)}</p></div></main>${footer}
       <script>document.getElementById("copyTalkLink").addEventListener("click",async()=>{const status=document.getElementById("shareStatus");try{await navigator.clipboard.writeText(${JSON.stringify(url)});status.textContent="Link copied";}catch{status.textContent=${JSON.stringify(url)};}});</script></body></html>`;
