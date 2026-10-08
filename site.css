@@ -968,7 +968,11 @@ h1 {
 }
 
 .landing-heading {
-  max-width: 940px;
+  max-width: none;
+}
+
+.landing-heading .lead {
+  max-width: none;
 }
 
 .landing-board {
