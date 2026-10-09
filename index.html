@@ -182,7 +182,7 @@
 
   function updateCountdown() {
     if (!countdown) return;
-    if (!nextTalk) {
+    if (!nextTalk || Date.now() >= nextTalk.start.getTime() + 60 * 60 * 1000) {
       renderNextTalk();
       if (!nextTalk) return;
     }

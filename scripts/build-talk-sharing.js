@@ -21,6 +21,11 @@ export async function buildTalkSharing(directory) {
   const match = home.match(/const seasonTalks = (\[.*?\]);/s);
   if (!match) throw new Error("No schedule data found for talk sharing");
   const talks = JSON.parse(match[1]);
+  for (const talk of talks) {
+    if (typeof talk.abstract !== "string" || !talk.abstract.trim()) {
+      throw new Error(`Missing announcement abstract: ${talk.presenter} (${talk.startIso}). Add the abstract before publishing.`);
+    }
+  }
   const header = home.match(/<header[\s\S]*?<\/header>/)[0].replaceAll('href="', 'href="/').replaceAll(' class="active-nav"', '');
   const footer = home.match(/<footer[\s\S]*?<\/footer>/)[0].replace(/href="(?!https?:|mailto:|\/)/g, 'href="/');
   const zoom = home.match(/https:\/\/us06web\.zoom\.us\/[^"<>]+/)[0];
