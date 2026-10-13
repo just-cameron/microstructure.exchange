@@ -65,7 +65,7 @@
               <div class="countdown-grid" id="webinarCountdown" aria-live="polite">
                 <div class="countdown-unit"><strong>--:--:--:--.---</strong><span>until the next webinar</span></div>
               </div>
-              <p class="panel-text" id="nextTalkDetails"><strong>Farshid Abdi</strong><br>Overnight Corporate Bond Trading<br><span class="season-authors">with Marco Rossi and Botao Wu</span><br>September 15, 2026 at 11:00 a.m. ET.</p>
+              <p class="panel-text" id="nextTalkDetails"><strong>Farshid Abdi</strong><span class="talk-title">Overnight Corporate Bond Trading</span><span class="season-authors">with Marco Rossi and Botao Wu</span><br>September 15, 2026 at 11:00 a.m. ET.</p>
               <div class="archive-links hero-actions" id="nextTalkActions">
                 <a class="pill" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7198520">paper</a>
                 <a class="pill" href="https://us06web.zoom.us/j/89390179642?pwd=MAx9kM3S03Vx7FqLCwEL2zke6HFgPt.1">Zoom</a>
@@ -164,8 +164,8 @@
 
     if (nextTalkDetails) {
       nextTalkDetails.innerHTML =
-        '<strong>' + escapeHtml(nextTalk.presenter) + '</strong><br>' +
-        escapeHtml(nextTalk.title) + '<br>' +
+        '<strong>' + escapeHtml(nextTalk.presenter) + '</strong>' +
+        '<span class="talk-title">' + escapeHtml(nextTalk.title) + '</span>' +
         '<span class="season-authors">with ' + escapeHtml(nextTalk.authors.replace(/^.*?;\s*/, "").replace(/;\s*/g, " and ")) + '</span><br>' +
         formatTalkDate(nextTalk.startIso) + '.';
     }

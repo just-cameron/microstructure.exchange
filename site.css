@@ -1124,6 +1124,15 @@ h1 {
   font-size: 0.95rem;
 }
 
+.panel-text .talk-title {
+  display: block;
+  margin: 4px 0 2px;
+  color: var(--ink);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
 .abstract-toggle {
   margin-top: 14px;
 }
