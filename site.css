@@ -1124,6 +1124,10 @@ h1 {
   font-size: 0.95rem;
 }
 
+.panel-text .affiliation {
+  font-weight: 400;
+}
+
 .panel-text .talk-title {
   display: block;
   margin: 4px 0 2px;
