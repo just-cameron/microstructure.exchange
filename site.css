@@ -1344,4 +1344,61 @@ h1 {
     flex-direction: column;
   }
 }
+
+/* Home page: a smaller banner and slightly larger content */
+.landing-heading h1 {
+  font-size: clamp(2.4rem, 4.6vw, 4.6rem);
+}
+
+.landing-heading .eyebrow {
+  font-size: 0.95rem;
+}
+
+.landing-heading .lead {
+  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+}
+
+.hero-panel .panel-label {
+  font-size: 0.88rem;
+}
+
+.hero-panel .countdown-unit strong {
+  font-size: clamp(1.25rem, 2.3vw, 1.65rem);
+}
+
+.hero-panel .countdown-unit span {
+  font-size: 0.84rem;
+}
+
+.hero-panel .panel-text {
+  font-size: 1.1rem;
+}
+
+.hero-panel .panel-text .talk-title {
+  font-size: 1.45rem;
+}
+
+.hero-panel .panel-text .season-authors {
+  font-size: 1.05rem;
+}
+
+.hero-actions .pill {
+  font-size: 0.88rem;
+}
+
+.next-abstract strong {
+  font-size: 0.9rem;
+}
+
+.next-abstract p {
+  font-size: 1.04rem;
+}
+
+.landing-card strong {
+  font-size: 1.25rem;
+}
+
+.landing-card span {
+  font-size: 1.04rem;
+}
 /* End split-page additions */
