@@ -1401,4 +1401,26 @@ h1 {
 .landing-card span {
   font-size: 1.04rem;
 }
+
+/* Top menu: slightly larger on every page */
+.nav {
+  min-height: 76px;
+}
+
+.brand-mark {
+  width: 52px;
+  height: 52px;
+}
+
+.navlinks a {
+  padding: 9px 14px;
+  font-size: 1rem;
+}
+
+@media (max-width: 620px) {
+  .navlinks a {
+    padding: 8px 10px;
+    font-size: 0.92rem;
+  }
+}
 /* End split-page additions */
