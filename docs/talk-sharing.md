@@ -11,3 +11,28 @@ Each talk has a stable `/talks/YYYY-MM-DD` page with its own metadata and PNG. T
 The checked-in `talks/` folder preserves published pages across seasons. After changing talks, run `npm run stage:assets`, copy `.deploy/public/talks/` into `talks/`, and commit those generated files with the schedule changes. Deployment regenerates the current season and retains older pages. Keep old image files so previously cached posts can still load them.
 
 Run `node --test scripts/talk-sharing.test.js` after staging to check rollover boundaries and generated links.
+# Scheduled YouTube Broadcasts
+
+Store only the public watch URL in `youtubeUrl` in the season data in both
+`index.html` and `past-talks.html`. Older videos can continue to use `recordingUrl`.
+The talk-page build embeds that video with no autoplay. The same player shows
+the waiting screen, broadcast, and archived replay; no date-based video swap is
+needed. Keep embedding enabled and the replay public in YouTube Studio.
+
+The schedule and current-season archive YouTube buttons link to the permanent
+talk page's `#webinar-video` section. Update the schedule action when adding a
+new broadcast. Abstracts remain visible below the player.
+
+Fall 2026 broadcasts scheduled in YouTube Studio, all at 11 a.m. Eastern:
+
+| Date | Presenter | Public URL |
+| --- | --- | --- |
+| October 27 | Vincent Grégoire | https://youtu.be/x3-Ow556ALU |
+| November 10 | Thierry Foucault | https://youtu.be/Kq1pDjO13No |
+| November 24 | Albert Menkveld | https://youtu.be/ItLD1fOLFeI |
+| December 8 | Chaojun Wang | https://youtu.be/5q3a9wjXNNA |
+
+These are streaming-software broadcasts. The host must connect Zoom to the
+matching scheduled broadcast and start it. Auto-start and auto-stop are off;
+scheduling does not start Zoom or transmit video. Stream keys must stay out of
+GitHub and public pages. No Zoom configuration was changed during scheduling.

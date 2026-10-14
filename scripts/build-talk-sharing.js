@@ -6,6 +6,16 @@ import sharp from "sharp";
 const origin = "https://microstructure.exchange";
 const escape = value => String(value || "").replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"}[c]));
 
+export function youtubeId(value) {
+  if (!value) return null;
+  const url = new URL(value);
+  const host = url.hostname.replace(/^www\./, "");
+  const id = host === "youtu.be" ? url.pathname.slice(1) :
+    host === "youtube.com" ? (url.searchParams.get("v") || url.pathname.match(/^\/(?:live|embed)\/([^/]+)$/)?.[1]) : null;
+  if (!/^[\w-]{11}$/.test(id || "")) throw new Error("Invalid public YouTube URL");
+  return id;
+}
+
 function lines(text, limit) {
   const result = [""];
   for (const word of text.split(/\s+/)) {
@@ -60,6 +70,9 @@ export async function buildTalkSharing(directory) {
     await sharp(Buffer.from(svg)).png().toFile(join(output, imageName));
     const tags = [ ["og:type", "website"], ["og:site_name", "The Microstructure Exchange"], ["og:title", socialTitle], ["og:description", description], ["og:url", url], ["og:image", imageUrl], ["og:image:width", "1200"], ["og:image:height", "630"], ["og:image:type", "image/png"], ["og:image:alt", imageAlt], ["twitter:card", "summary_large_image"], ["twitter:title", socialTitle], ["twitter:description", description], ["twitter:image", imageUrl], ["twitter:image:alt", imageAlt] ];
     const action = (label, href) => href ? `<a class="pill" href="${escape(href)}">${label}</a>` : "";
+    const videoUrl = talk.youtubeUrl || talk.recordingUrl;
+    const videoId = youtubeId(videoUrl);
+    const player = videoId ? `<section id="webinar-video" class="webinar-video" aria-label="Webinar video"><iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="${escape(talk.title)} - YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>` : "";
     const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
       <title>${escape(socialTitle)}</title><meta name="description" content="${escape(description)}"><link rel="canonical" href="${url}">
       ${tags.map(([key,value])=>`<meta ${key.startsWith("og:") ? "property" : "name"}="${key}" content="${escape(value)}">`).join("\n")}
@@ -68,9 +81,9 @@ export async function buildTalkSharing(directory) {
       <style>.talk-page{padding-top:40px;padding-bottom:64px}.talk-page h1{font-size:32px;line-height:1.25;max-width:1000px}.talk-page .abstract-text{max-width:850px;line-height:1.75;margin:32px 0}.talk-page .archive-links{flex-wrap:wrap;margin-top:24px}.talk-page .share-status{margin-left:12px}.talk-page .talk-authors{line-height:1.6}</style></head><body>
       ${header}<main class="shell talk-page"><p class="eyebrow">${escape(date)}</p><h1>${escape(talk.title)}</h1>
       <p class="lead">Presented by ${escape(talk.presenter)}</p><p class="talk-authors">${escape(talk.authors)}</p>
-      <div class="archive-links">${action("recording", talk.recordingUrl)}${action("paper", talk.paperUrl)}${action("slides", talk.slidesUrl)}${action("Zoom", zoom)}${action("Schedule", "/season.html")}
+      <div class="archive-links">${action("Watch on YouTube", videoUrl)}${action("paper", talk.paperUrl)}${action("slides", talk.slidesUrl)}${action("Zoom", zoom)}${action("Schedule", "/season.html")}
       <button class="pill" type="button" id="copyTalkLink" style="cursor:pointer">Copy talk link</button><span id="shareStatus" class="share-status" role="status"></span></div>
-      <div class="abstract-text"><h2>Abstract</h2><p>${escape(talk.abstract)}</p></div></main>${footer}
+      ${player}<div class="abstract-text"><h2>Abstract</h2><p>${escape(talk.abstract)}</p></div></main>${footer}
       <script>document.getElementById("copyTalkLink").addEventListener("click",async()=>{const status=document.getElementById("shareStatus");try{await navigator.clipboard.writeText(${JSON.stringify(url)});status.textContent="Link copied";}catch{status.textContent=${JSON.stringify(url)};}});</script></body></html>`;
     writeFileSync(join(output, `${id}.html`), html);
     manifest.push({ startIso: talk.startIso, socialTitle, description, imageUrl, imageAlt, url });

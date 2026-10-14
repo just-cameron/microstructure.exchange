@@ -6,11 +6,29 @@ import vm from "node:vm";
 import { mkdtempSync, writeFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { buildTalkSharing } from "./build-talk-sharing.js";
+import { buildTalkSharing, youtubeId } from "./build-talk-sharing.js";
 
 const home = readFileSync(new URL("../index.html", import.meta.url), "utf8");
 const schedule = JSON.parse(home.match(/const seasonTalks = (\[.*?\]);/s)[1]);
 const escape = value => value.replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"}[c]));
+
+test("public video links become safe embedded players on permanent talk pages", () => {
+  for (const talk of schedule) {
+    const id = youtubeId(talk.youtubeUrl || talk.recordingUrl);
+    const html = readFileSync(new URL(`../.deploy/public/talks/${talk.startIso.slice(0,10)}.html`, import.meta.url), "utf8");
+    if (!id) {
+      assert.ok(!html.includes('id="webinar-video"'));
+      continue;
+    }
+    assert.ok(html.includes(`src="https://www.youtube-nocookie.com/embed/${id}"`));
+    assert.ok(html.includes('id="webinar-video"'));
+  }
+  assert.equal(youtubeId('https://www.youtube.com/watch?v=x3-Ow556ALU'), 'x3-Ow556ALU');
+  assert.equal(youtubeId('https://youtube.com/live/x3-Ow556ALU'), 'x3-Ow556ALU');
+  assert.equal(youtubeId(''), null);
+  assert.throws(() => youtubeId('https://example.com/x3-Ow556ALU'));
+  assert.throws(() => youtubeId('https://youtu.be/invalid'));
+});
 
 test("every announcement includes its complete abstract, expanded by default", () => {
   for (const talk of schedule) {
