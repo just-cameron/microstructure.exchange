@@ -27,7 +27,7 @@ Fall 2026 broadcasts scheduled in YouTube Studio, all at 11 a.m. Eastern:
 
 | Date | Presenter | Public URL |
 | --- | --- | --- |
-| October 27 | Vincent Grégoire | https://youtu.be/x3-Ow556ALU |
+| October 27 | Vincent Grégoire (uploaded recording) | https://youtu.be/CsmN8EWbIBA |
 | November 10 | Thierry Foucault | https://youtu.be/Kq1pDjO13No |
 | November 24 | Albert Menkveld | https://youtu.be/ItLD1fOLFeI |
 | December 8 | Chaojun Wang | https://youtu.be/5q3a9wjXNNA |
