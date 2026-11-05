@@ -4,6 +4,8 @@ Every scheduled talk must have a nonempty `abstract` in its schedule data before
 
 The homepage's Open Graph and X metadata are selected at request time from the current schedule. A talk remains current until one hour after its start. When the season ends, the generic TME card is used. Social platforms may cache their own previews.
 
+The visible **Next webinar** box is also filled in at request time, for visitors and crawlers that do not run JavaScript. The build renders the box for each talk by running the homepage's own script and stores it in `talks/manifest.json` (and `talks/home-complete.json` for the season end), so the no-JavaScript box always matches what browsers show. The static fallback text in `index.html` no longer needs hand-editing.
+
 Each talk has a stable `/talks/YYYY-MM-DD` page with its own metadata and PNG. The homepage, schedule, and current-season past talks expose these through **Share this talk**. The talk page has a **Copy talk link** button.
 
 `npm run stage:assets` builds these pages and images from the `seasonTalks` JSON in `index.html`. Keep that data synchronized with the visible schedule when editing talks. Dates include the appropriate New York UTC offset (11 a.m. is `-04:00` in summer and `-05:00` in winter).

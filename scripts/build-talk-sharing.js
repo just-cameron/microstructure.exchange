@@ -1,6 +1,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { createHash } from "node:crypto";
+import vm from "node:vm";
 import sharp from "sharp";
 
 const origin = "https://microstructure.exchange";
@@ -24,6 +25,27 @@ function lines(text, limit) {
     else result[i] += (result[i] ? " " : "") + word;
   }
   return result;
+}
+
+// Renders the homepage "Next webinar" box exactly as the browser would at `now`,
+// by running the homepage's own script against stub elements.
+export function renderHomepageBox(home, now) {
+  const script = [...home.matchAll(/<script>([\s\S]*?)<\/script>/g)].find(m => m[1].includes("const seasonTalks"));
+  if (!script) throw new Error("No homepage script found for the Next webinar box");
+  const ids = ["webinarCountdown", "nextTalkDetails", "nextTalkActions", "nextTalkAbstract"];
+  const elements = Object.fromEntries(ids.map(id => [id, { innerHTML: "", hidden: false }]));
+  class Clock extends Date {
+    constructor(...args) { super(...(args.length ? args : [now])); }
+    static now() { return now; }
+  }
+  const context = vm.createContext({ Date: Clock, Intl, document: { querySelector: selector => elements[selector.slice(1)] }, window: { setInterval() {} } });
+  vm.runInContext(script[1], context);
+  return {
+    details: elements.nextTalkDetails.innerHTML,
+    actions: elements.nextTalkActions.innerHTML,
+    abstract: elements.nextTalkAbstract.innerHTML,
+    abstractHidden: Boolean(elements.nextTalkAbstract.hidden),
+  };
 }
 
 export async function buildTalkSharing(directory) {
@@ -86,7 +108,10 @@ export async function buildTalkSharing(directory) {
       ${player}<div class="abstract-text"><h2>Abstract</h2><p>${escape(talk.abstract)}</p></div></main>${footer}
       <script>document.getElementById("copyTalkLink").addEventListener("click",async()=>{const status=document.getElementById("shareStatus");try{await navigator.clipboard.writeText(${JSON.stringify(url)});status.textContent="Link copied";}catch{status.textContent=${JSON.stringify(url)};}});</script></body></html>`;
     writeFileSync(join(output, `${id}.html`), html);
-    manifest.push({ startIso: talk.startIso, socialTitle, description, imageUrl, imageAlt, url });
+    const homeBox = renderHomepageBox(home, Date.parse(talk.startIso) - 1);
+    manifest.push({ startIso: talk.startIso, socialTitle, description, imageUrl, imageAlt, url, home: homeBox });
   }
   writeFileSync(join(output, "manifest.json"), JSON.stringify(manifest));
+  const lastEnd = Math.max(...talks.map(talk => Date.parse(talk.startIso))) + 3600000;
+  writeFileSync(join(output, "home-complete.json"), JSON.stringify(renderHomepageBox(home, lastEnd)));
 }

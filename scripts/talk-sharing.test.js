@@ -88,3 +88,15 @@ test("every permanent page has its own canonical URL and matching image", () => 
     assert.ok(existsSync(new URL(`../.deploy/public${new URL(talk.imageUrl).pathname}`, import.meta.url)));
   }
 });
+test("the homepage's no-JavaScript Next webinar box matches each talk and the season end", () => {
+  for (const talk of schedule) {
+    const box = talks.find(entry => entry.startIso === talk.startIso).home;
+    assert.ok(box.details.includes(escape(talk.presenter)), `Box missing presenter for ${talk.presenter}`);
+    assert.ok(box.abstract.includes(escape(talk.abstract)));
+    assert.equal(box.abstractHidden, false);
+    if (talk.paperUrl) assert.ok(box.actions.includes(escape(talk.paperUrl)));
+  }
+  const complete = JSON.parse(readFileSync(new URL("../.deploy/public/talks/home-complete.json", import.meta.url)));
+  assert.ok(complete.details.includes("Next season to be announced"));
+  assert.equal(complete.abstractHidden, true);
+});
